@@ -16,14 +16,13 @@ const Input = styled.input<LayoutProps & BorderProps & TextProps>`
   ${marginBottom};
 
   ${padding};
-  ${paddingLeft};
 `;
 
 Input.defaultProps = {
   mg: 0,
   borderRadius: "10px",
-  pl: "24px",
   border: `1px solid ${theme.colors.black.primary}`,
+  fontSize: theme.fontsizes.label,
 };
 
 export default Input;

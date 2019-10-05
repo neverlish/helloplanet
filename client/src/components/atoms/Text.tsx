@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../utils/theme";
-import { LayoutProps, TextProps } from "../../interfaces";
+import { LayoutProps, TextProps, MouseProps } from "../../interfaces";
 import { medium, margin, marginTop, marginRight,marginLeft, marginBottom, regular, demiLight, light } from "../../utils";
 
 const TextComponent = styled.p<LayoutProps & TextProps>`
@@ -22,7 +22,7 @@ const TextComponent = styled.p<LayoutProps & TextProps>`
   ${marginBottom};
 `;
 
-const Text = ({h1, children, ...rest }: TextProps & LayoutProps) => {
+const Text = ({h1, children, ...rest }: TextProps & LayoutProps & MouseProps) => {
   return(
     <TextComponent h1={h1} {...rest}>
       {children}

@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
-import { FlexProps, LayoutProps, BorderProps } from "../../interfaces";
-import { margin, marginBottom, paddingTop } from "../../utils";
+import { FlexProps, LayoutProps, BorderProps, MouseProps } from "../../interfaces";
+import { margin, marginBottom, marginLeft, paddingTop, marginTop } from "../../utils";
 
-const Flex = styled.div<FlexProps & LayoutProps & BorderProps>`
+const Flex = styled.div<FlexProps & LayoutProps & BorderProps & MouseProps & BorderProps>`
   display: flex;
   flex-direction: ${(p: FlexProps) =>
   p.column ? 'column' : p.row ? 'row' : "row"};
@@ -12,11 +11,18 @@ const Flex = styled.div<FlexProps & LayoutProps & BorderProps>`
   background-color: ${(p: LayoutProps) => p.bg};
   width: ${(p: LayoutProps) => p.w};
   height: ${(p: LayoutProps) => p.h};
+  border: ${(p: BorderProps) => p.border};
   border-radius: ${(p: BorderProps) => p.borderRadius};
 
   ${margin};
+  ${marginTop};
   ${marginBottom};
+  ${marginLeft};
   ${paddingTop};
+
+  :hover {
+    background-color: ${(p: LayoutProps) => p.hover ? p.hoverColor : "none"}
+  }
 `
 
 Flex.defaultProps = {
@@ -27,6 +33,7 @@ Flex.defaultProps = {
   alignItems: 'center',
   center: false,
   bg: 'transparent',
+  hover: false,
 };
 
 export default Flex;
