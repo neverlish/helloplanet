@@ -21,6 +21,8 @@ export interface LayoutProps {
   pr?: number | string;
   pb?: number | string;
   pl?: number | string;
+  hover?: boolean;
+  hoverColor?: string;
 }
 
 export interface BorderProps {
@@ -38,3 +40,7 @@ export interface TextProps {
   demiLight?:boolean;
   light?:boolean;
 };
+
+export interface MouseProps {
+  cursor?: string;
+}

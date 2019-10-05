@@ -8,6 +8,7 @@ export const fontsizes = {
 export const colors = {
   black: {
     "primary": "#666666",
+    "secondary": "#bbbbbb",
   },
 };
 

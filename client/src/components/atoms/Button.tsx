@@ -3,29 +3,44 @@ import styled from "styled-components";
 import Flex from "../atoms/Flex";
 import Text from "../atoms/Text";
 import { theme } from "../../utils/theme";
-import { LayoutProps, TextProps } from "../../interfaces";
+import { LayoutProps, TextProps, MouseProps, BorderProps } from "../../interfaces";
 
 interface ButtonProps {
   color?: string;
   label: string;
-  w?: string | number;
-  h?: string | number;
-  borderRadius?: string;
+  hover?: boolean;
+  hoverColor?: string;
+  onClick?: () => void;
 };
 
-const Button: React.FC<ButtonProps & LayoutProps & TextProps> = ({color, label, w, h, borderRadius, ...rest}) => {
+const Button: React.FC<ButtonProps & LayoutProps & TextProps & MouseProps & BorderProps> = ({
+  color,
+  bg,
+  label,
+  w,
+  h,
+  borderRadius,
+  hover,
+  hoverColor,
+  cursor,
+  ...rest
+}) => {
   return(
     <Flex
       center
-      bg={color}
+      bg={bg}
       w={w}
       h={h}
       borderRadius={borderRadius}
+      hover={hover}
+      hoverColor={hoverColor}
+      cursor="pointer"
       {...rest}
     >
       <Text
         fontSize={theme.fontsizes.label}
-        color="white"
+        cursor="pointer"
+        color={color}
       >
         {label}
       </Text>
@@ -36,5 +51,6 @@ const Button: React.FC<ButtonProps & LayoutProps & TextProps> = ({color, label, 
 Button.defaultProps = {
   w: '100%',
   borderRadius: '10px',
+  hover: false
 };
 export default Button 
