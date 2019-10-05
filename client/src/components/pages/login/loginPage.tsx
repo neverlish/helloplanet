@@ -43,19 +43,18 @@ const LoginPage: React.FC<Props> = () => {
           placeholder={contents.id.label}
           w="calc(100% - 24px)"
           h="75px"
-          fontSize={theme.fontsizes.label}
           mb="20px"
         />
         <Input
           placeholder={contents.pw.label}
           w="calc(100% - 24px)"
           h="75px"
-          fontSize={theme.fontsizes.label}
           mb="20px"
         />
         <Button
           label={contents.loginBtn.label}
-          color={theme.colors.black.primary}
+          bg={theme.colors.black.primary}
+          color="white"
           h="75px"
           mb="30px"
         />
@@ -67,7 +66,8 @@ const LoginPage: React.FC<Props> = () => {
         </Text>
         <Button
           label={contents.singUp.label}
-          color={theme.colors.black.primary}
+          bg={theme.colors.black.primary}
+          color="white"
           h="75px"
           mb="30px"
         />
