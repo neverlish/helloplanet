@@ -4,7 +4,9 @@ import { LayoutProps, BorderProps, TextProps } from "../../interfaces";
 import { theme } from "../../utils/theme";
 import { margin, padding, paddingLeft, marginBottom } from "../../utils";
 
-const Input = styled.input<LayoutProps & BorderProps & TextProps>`
+const Input = styled.input.attrs(p => ({
+  type: p.type,
+}))<LayoutProps & BorderProps & TextProps>`
   outline: none;
   width: ${(p: LayoutProps) => p.w};
   height: ${(p: LayoutProps) => p.h};
@@ -16,6 +18,7 @@ const Input = styled.input<LayoutProps & BorderProps & TextProps>`
   ${marginBottom};
 
   ${padding};
+  ${paddingLeft};
 `;
 
 Input.defaultProps = {
@@ -23,6 +26,8 @@ Input.defaultProps = {
   borderRadius: "10px",
   border: `1px solid ${theme.colors.black.primary}`,
   fontSize: theme.fontsizes.label,
+  pl: '24px',
+  type: "text",
 };
 
 export default Input;

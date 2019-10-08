@@ -11,7 +11,20 @@ interface ButtonProps {
   hover?: boolean;
   hoverColor?: string;
   onClick?: () => void;
+  disabled?: boolean;
+  disabledColor?: string;
 };
+
+interface ButtonContainerProps {
+  color?: string;
+  hover?: boolean;
+  hoverColor?: string;
+  onClick?: () => void;
+  disabled?: boolean;
+  disabledColor?: string;
+}
+
+const ButtonContainer = styled(Flex)<ButtonContainerProps & LayoutProps & TextProps & MouseProps & BorderProps>``;
 
 const Button: React.FC<ButtonProps & LayoutProps & TextProps & MouseProps & BorderProps> = ({
   color,
@@ -23,10 +36,15 @@ const Button: React.FC<ButtonProps & LayoutProps & TextProps & MouseProps & Bord
   hover,
   hoverColor,
   cursor,
+  disabled,
+  disabledColor,
   ...rest
 }) => {
   return(
-    <Flex
+    <ButtonContainer
+      as="button"
+      disabled={disabled}
+      disabledColor={disabledColor}
       center
       bg={bg}
       w={w}
@@ -44,7 +62,7 @@ const Button: React.FC<ButtonProps & LayoutProps & TextProps & MouseProps & Bord
       >
         {label}
       </Text>
-    </Flex>
+    </ButtonContainer>
   );
 };
 

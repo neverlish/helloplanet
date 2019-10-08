@@ -13,7 +13,7 @@ const Flex = styled.div<FlexProps & LayoutProps & BorderProps & MouseProps & Bor
   height: ${(p: LayoutProps) => p.h};
   border: ${(p: BorderProps) => p.border};
   border-radius: ${(p: BorderProps) => p.borderRadius};
-
+  position: ${(p: LayoutProps) => p.position};
   ${margin};
   ${marginTop};
   ${marginBottom};
@@ -34,6 +34,7 @@ Flex.defaultProps = {
   center: false,
   bg: 'transparent',
   hover: false,
+  position: 'static',
 };
 
 export default Flex;
