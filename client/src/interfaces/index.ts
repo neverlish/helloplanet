@@ -23,6 +23,7 @@ export interface LayoutProps {
   pl?: number | string;
   hover?: boolean;
   hoverColor?: string;
+  position?: string;
 }
 
 export interface BorderProps {
