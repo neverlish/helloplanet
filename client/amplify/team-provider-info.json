@@ -9,6 +9,11 @@
             "UnauthRoleName": "amplify-interplanet-dev-141225-unauthRole",
             "StackName": "amplify-interplanet-dev-141225",
             "StackId": "arn:aws:cloudformation:ap-northeast-2:367416660003:stack/amplify-interplanet-dev-141225/080a97e0-fb9d-11e9-a0cc-0247705dbe2a"
+        },
+        "categories": {
+            "auth": {
+                "interplanet5e176c56": {}
+            }
         }
     }
 }
