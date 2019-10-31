@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "interplanet",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authinterplanet5e176c56",
+            "Outputs.UserPoolId"
+        ]
+    }
+}
