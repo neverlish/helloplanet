@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../utils/theme";
 import { LayoutProps, TextProps, MouseProps } from "../../interfaces";
-import { medium, margin, marginTop, marginRight,marginLeft, marginBottom, regular, demiLight, light } from "../../utils";
+import { medium, margin, marginTop, marginRight,marginLeft, marginBottom, regular, demiLight, light, paddingLeft } from "../../utils";
 
 const TextComponent = styled.p<LayoutProps & TextProps>`
   font-size: ${(p: TextProps) => 
@@ -20,6 +20,8 @@ const TextComponent = styled.p<LayoutProps & TextProps>`
   ${marginRight};
   ${marginLeft};
   ${marginBottom};
+
+  ${paddingLeft};
 `;
 
 const Text = ({h1, children, ...rest }: TextProps & LayoutProps & MouseProps) => {
