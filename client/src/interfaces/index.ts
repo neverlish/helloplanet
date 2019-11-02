@@ -40,6 +40,7 @@ export interface TextProps {
   regular?:boolean;
   demiLight?:boolean;
   light?:boolean;
+  lineHeight?: number;
 };
 
 export interface MouseProps {

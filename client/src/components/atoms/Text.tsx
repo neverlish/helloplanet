@@ -10,6 +10,7 @@ const TextComponent = styled.p<LayoutProps & TextProps>`
     typeof p.fontSize === "string" ? p.fontSize : `${p.fontSize}px`};
   color: ${(p: TextProps) => p.color};
 
+  line-height: ${(p: TextProps) => p.lineHeight};
   ${medium};
   ${regular};
   ${demiLight};
