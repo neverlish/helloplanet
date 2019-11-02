@@ -41,10 +41,10 @@ const MeetNotice: React.FC<Props> = ({
           {isParticipate && <BookMark label="내 모임" />}
         </BookMarkBlock>
         <Flex mb="23px" alignItems="flex-end">
-          <Text color="#666666" fontSize="30px" mr="12.3px">{name}</Text>
+          <Text b color="#666666" fontSize="30px" mr="12.3px">{name}</Text>
           <Text color="#666666" fontSize="18px" mb="4px">의 다음 모임은</Text>
         </Flex>
-        <Text color="#666666" fontSize="18px" mb="12px">{timeStamp}</Text>
+        <Text b color="#666666" fontSize="18px" mb="12px">{timeStamp}</Text>
         <Text color="#666666" fontSize="18px" mb="58.7px">입니다.</Text>
         <Flex w="100%" justifyContent="space-between">
           <Flex center>
@@ -52,6 +52,7 @@ const MeetNotice: React.FC<Props> = ({
             <Switch isActive={pushNotification} />
           </Flex>
           <Button
+            b
             label="공지보기"
             w="111px"
             h="40px"

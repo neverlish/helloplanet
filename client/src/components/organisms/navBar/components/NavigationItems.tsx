@@ -49,6 +49,7 @@ const NavigationItems: React.FC = () => {
             onClick={()=> toggleIdx(idx)}
           >
             <Text
+              b
               pl="70px"
               fontSize="20px"
               color={idx === activeIdx ? "#2a374e" : "white"}

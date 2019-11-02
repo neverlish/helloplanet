@@ -35,7 +35,7 @@ const InfoText: React.FC<{title: string, content: string} & LayoutProps> =
   ({title, content, ...rest}) => {
   return(
     <Flex alignItems="center" {...rest}>
-      <Text mr="22px" fontSize="21px" color="#666666">{title}</Text>
+      <Text b mr="22px" fontSize="21px" color="#666666">{title}</Text>
       <Text fontSize="17px" color="#666666">{content}</Text>
     </Flex>
   );
@@ -52,7 +52,7 @@ const DescriptionSection: React.FC = () => {
       <InfoContainer column alignItems="flex-start">
         <Flex w="100%" justifyContent="space-between" mb="30.5px">
           <Text fontSize="25px" color="#666666">본모임 공지</Text>
-          <Text fontSize="30px">어텀</Text>
+          <Text b fontSize="30px">어텀</Text>
         </Flex>
         <Line />
         <InfoText

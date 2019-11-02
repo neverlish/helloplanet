@@ -41,6 +41,8 @@ export interface TextProps {
   demiLight?:boolean;
   light?:boolean;
   lineHeight?: number;
+  b?: boolean;
+  eb?: boolean;
 };
 
 export interface MouseProps {

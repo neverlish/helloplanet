@@ -63,6 +63,7 @@ const BookMarkContainer = styled.div`
     .text {
       position: absolute;
       top: 14px;
+      font-family: "NanumSqaureB";
       font-size: 14px;
       line-height: 2.93;
       text-align: center;

@@ -5,7 +5,7 @@ import Text from "../../../atoms/Text";
 
 const mock = {
   season: {
-    title: "지금은 가을시즌 중!",
+    title: "가을시즌",
     start: "2019.09.07",
     end: "2019.11.06",
   },
@@ -27,11 +27,18 @@ const Content = styled(Flex)`
 
 
 const SeasonLabel: React.FC = () => {
+  const text1 = `지금은 `;
+  const text2 = ` 중!`;
+
   return(
     <Flex ml="70px" mb="105px" column alignItems="flex-start">
-      <Text fontSize="17px" color="white" mb="10px">
-        {mock.season.title}
-      </Text>
+      <Flex mb="10px">
+        <Text fontSize="17px" color="white" mr="3px">{text1}</Text>
+        <Text fontSize="17px" color="white" b>
+          {mock.season.title}
+        </Text>
+        <Text fontSize="17px" color="white" ml="3px">{text2}</Text>
+      </Flex>
       <Text fontSize="17px" color="white" mb="10px">
         {mock.season.start} - {mock.season.end}
       </Text>
@@ -43,7 +50,7 @@ const WelcomeUserLabel: React.FC = () => {
   const content = `반가워요\n${mock.nickName}님 :)`;
   return(
     <div style={{whiteSpace: "pre"}}>
-      <Text ml="70px" fontSize="35px" color="white" mb="83px">
+      <Text eb ml="70px" fontSize="35px" color="white" mb="83px">
         {content}
       </Text>
     </div>
@@ -54,7 +61,7 @@ const IconWithLabel: React.FC<{label: string}> = ({label})=> {
   return(
     <Flex ml="70px" mb="50px">
       icon
-      <Text fontSize="20px" color="white">{label}</Text>
+      <Text b fontSize="20px" color="white">{label}</Text>
     </Flex>
   );
 };

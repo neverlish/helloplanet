@@ -9,7 +9,7 @@ const TextComponent = styled.p<LayoutProps & TextProps>`
     p.h1 ? `${theme.fontsizes.h1}px` :
     typeof p.fontSize === "string" ? p.fontSize : `${p.fontSize}px`};
   color: ${(p: TextProps) => p.color};
-
+  font-family: ${(p: TextProps) => p.eb ? 'NanumSquareEB' : p.b ? 'NanumSquareB' : 'NanumSquareL'};
   line-height: ${(p: TextProps) => p.lineHeight};
   ${medium};
   ${regular};
@@ -35,7 +35,9 @@ const Text = ({h1, children, ...rest }: TextProps & LayoutProps & MouseProps) =>
 
 Text.defaultProps = {
   mg: "0px",
-  color: theme.colors.black.primary
+  color: theme.colors.black.primary,
+  eb: false,
+  b: false,
 };
 
 export default Text;
