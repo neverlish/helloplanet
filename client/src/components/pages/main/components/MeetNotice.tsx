@@ -4,6 +4,7 @@ import Text from "../../../atoms/Text";
 import Flex from "../../../atoms/Flex";
 import Switch from "../../../atoms/Switch";
 import Button from "../../../atoms/Button";
+import { BookMark, BookMarkBlock } from "./index";
 
 const Container = styled.div`
   width: 400px;
@@ -11,6 +12,7 @@ const Container = styled.div`
   border-radius: 20px;
   box-shadow: 3px 2px 4px 0 rgba(0, 0, 0, 0.16);
   background-color: white;
+  position: relative;
 `;
 
 const Content = styled.div`
@@ -35,6 +37,9 @@ const MeetNotice: React.FC<Props> = ({
   return (
     <Container>
       <Content>
+        <BookMarkBlock>
+          {isParticipate && <BookMark label="내 모임" />}
+        </BookMarkBlock>
         <Flex mb="23px" alignItems="flex-end">
           <Text color="#666666" fontSize="30px" mr="12.3px">{name}</Text>
           <Text color="#666666" fontSize="18px" mb="4px">의 다음 모임은</Text>
