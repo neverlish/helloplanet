@@ -47,4 +47,5 @@ export interface TextProps {
 
 export interface MouseProps {
   cursor?: string;
+  onClick?: () => void;
 }
