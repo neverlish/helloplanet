@@ -1,13 +1,26 @@
+import * as React from 'react';
 import { withAuthenticator } from 'aws-amplify-react';
-import React from 'react';
-import LoginPage from './components/pages/login';
 
-const App: React.FC = () => {
-  return (
-    <>
-      <LoginPage />
-    </>
-  );
+interface AppProps {
+  authState?: any;
+}
+
+class App extends React.Component<AppProps> {
+  constructor(props: AppProps, context: any) {
+    super(props, context);
+  }
+
+  render() {
+    if (this.props.authState == 'signedIn') {
+      return (
+        <React.Fragment>
+          <h1>Hello World</h1>
+        </React.Fragment>
+      );
+    } else {
+      return null;
+    }
+  }
 }
 
 export default withAuthenticator(App);
