@@ -1,7 +1,10 @@
-import modules from "./modules";
+import createRootReducer from "./modules";
 import { createStore, Store } from "redux";
+import { createBrowserHistory } from 'history';
+
+export const history = createBrowserHistory();
+const rootReducer = createRootReducer(history);
 
 export default function configureStore():Store {
-  const store = createStore(modules);
-  return store;
+  return createStore(rootReducer);
 }

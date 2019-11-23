@@ -2,9 +2,12 @@ import Amplify from 'aws-amplify';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
-import App from './App';
+import { Route, Switch } from 'react-router';
+import AppWithAuth from './AppWithAuth';
+import { ConnectedRouter } from 'connected-react-router';
 import * as serviceWorker from './serviceWorker';
-import configureStore from "./stores";
+import configureStore, {history} from "./stores";
+
 
 Amplify.configure({
   aws_project_region: process.env.REACT_APP_aws_project_region,
@@ -21,7 +24,14 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ConnectedRouter history={history}>
+      <>
+        <Switch>
+          <Route exact path="/" render={() => (<div>app</div>)} />
+          <Route path="/auth" render={() => (<AppWithAuth />)} />
+        </Switch>
+      </>
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root'),
 );
