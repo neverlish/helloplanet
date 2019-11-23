@@ -35,3 +35,4 @@ aws-exports.js
 awsconfiguration.json
 
 .env
+.idea
