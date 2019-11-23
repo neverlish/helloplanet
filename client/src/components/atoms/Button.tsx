@@ -38,6 +38,7 @@ const Button: React.FC<ButtonProps & LayoutProps & TextProps & MouseProps & Bord
   cursor,
   disabled,
   disabledColor,
+  fontSize,
   ...rest
 }) => {
   return(
@@ -56,7 +57,7 @@ const Button: React.FC<ButtonProps & LayoutProps & TextProps & MouseProps & Bord
       {...rest}
     >
       <Text
-        fontSize={theme.fontsizes.label}
+        fontSize={fontSize}
         cursor="pointer"
         color={color}
       >
@@ -69,6 +70,7 @@ const Button: React.FC<ButtonProps & LayoutProps & TextProps & MouseProps & Bord
 Button.defaultProps = {
   w: '100%',
   borderRadius: '10px',
+  fontSize: theme.fontsizes.label,
   hover: false
 };
 export default Button 

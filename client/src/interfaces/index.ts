@@ -40,8 +40,12 @@ export interface TextProps {
   regular?:boolean;
   demiLight?:boolean;
   light?:boolean;
+  lineHeight?: number;
+  b?: boolean;
+  eb?: boolean;
 };
 
 export interface MouseProps {
   cursor?: string;
+  onClick?: () => void;
 }

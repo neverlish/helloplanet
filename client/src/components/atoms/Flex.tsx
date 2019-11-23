@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FlexProps, LayoutProps, BorderProps, MouseProps } from "../../interfaces";
-import { margin, marginBottom, marginLeft, paddingTop, marginTop } from "../../utils";
+import { margin, marginBottom, marginLeft, paddingTop, marginTop, paddingLeft } from "../../utils";
 
 const Flex = styled.div<FlexProps & LayoutProps & BorderProps & MouseProps & BorderProps>`
   display: flex;
@@ -19,6 +19,7 @@ const Flex = styled.div<FlexProps & LayoutProps & BorderProps & MouseProps & Bor
   ${marginBottom};
   ${marginLeft};
   ${paddingTop};
+  ${paddingLeft};
 
   :hover {
     background-color: ${(p: LayoutProps) => p.hover ? p.hoverColor : "none"}

@@ -14,8 +14,8 @@ white-space: pre-wrap;
 font-size: 17px;
 `;
 
-export const renderField = (field: any) => {
-const {input, meta: { touched, error }, placeholder, type} = field;
+export const Field = (field: any) => {
+const {input, placeholder, type, onChange} = field;
   return(
     <Flex w="100%" position="relative">
     <Flex
@@ -29,8 +29,8 @@ const {input, meta: { touched, error }, placeholder, type} = field;
       w="100%"
       h="75px"
       mb="20px"
+      onChange={onChange}
     />
-    {touched && error && 
     <div
       style={{
         position: 'absolute',
@@ -46,10 +46,9 @@ const {input, meta: { touched, error }, placeholder, type} = field;
         srcSet="assets/alert_2x.png 2x, assets/alert_3x.png 3x"
         alt="alert icon image"
       />
-    </div>}
+    </div>
     </Flex>
-    {touched && error &&
-      <ErrorMessage>{error}</ErrorMessage>}
+      <ErrorMessage>error</ErrorMessage>
     </Flex>
   );
 };

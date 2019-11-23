@@ -1,0 +1,28 @@
+
+@font-face {
+  font-family: NanumSquareL;
+  src: url("/fonts/nanumSquare/NanumSquareLight.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/nanumSquare/NanumSquareLight.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: NanumSquareR;
+  src: url("/fonts/nanumSquare/NanumSquareRegular.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/nanumSquare/NanumSquareRegular.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: NanumSquareB;
+  src: url("/fonts/nanumSquare/NanumSquareBold.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/nanumSquare/NanumSquareBold.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: NanumSquareEB;
+  src: url("/fonts/nanumSquare/NanumSquareExtraBold.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/nanumSquare/NanumSquareExtraBold.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
