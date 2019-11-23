@@ -13,6 +13,8 @@
     "@types/styled-components": "^4.1.19",
     "aws-amplify": "^1.2.4",
     "aws-amplify-react": "^2.5.4",
+    "connected-react-router": "^6.6.0",
+    "history": "^4.10.1",
     "lodash": "^4.17.15",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
